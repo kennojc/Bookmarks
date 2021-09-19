@@ -3,7 +3,4 @@ class Bookmark < ApplicationRecord
   belongs_to :category
   belongs_to :type
 
-  def availability
-    self.category
-  end
 end
