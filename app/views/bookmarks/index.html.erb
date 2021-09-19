@@ -1,0 +1,23 @@
+
+<hr>
+<hr>
+<p id="notice"><%= notice %></p>
+<h1>Bookmarks App</h1>
+<%= render 'bookmarks/form' %>
+<hr>
+<hr>
+<ul id="list_bookmark">
+<h3>These are your saved Public Bookmarks</h3>
+<table>
+  <tbody>
+    <ul>
+      <%= render @bookmarks %>
+    </ul>
+  </tbody>
+
+
+</table>
+ 
+
+
+

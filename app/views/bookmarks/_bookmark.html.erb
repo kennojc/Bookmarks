@@ -1,0 +1,6 @@
+<li id="bookmark-<%= bookmark.id %>">
+  <p><%= bookmark.address %></p>
+  <%= link_to 'show', bookmark, remote: true %>
+  <%= link_to 'edit', edit_bookmark_path(bookmark), remote: true %>
+  <%= link_to 'destroy', bookmark, data: {remote: true, confirm: 'are you sure?'}, method: :delete %>
+</li> 

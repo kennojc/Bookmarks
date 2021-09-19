@@ -1,0 +1,37 @@
+<%= form_with(model: @bookmark) do |form| %>
+  <% if @bookmark.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(bookmark.errors.count, "error") %> prohibited this bookmark from being saved:</h2>
+
+      <ul>
+        <% bookmark.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<hr>
+<hr>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.url_field :address %>
+  </div>
+
+<div class="field">
+    <%= form.label :bookmark_category %>
+    <%= form.select :category_id, @categories.map { |category| [category.name, category.id] }, prompt: "Seleccione una opción" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bookmark_type %>
+    <%= form.select :type_id, @types.map { |type| [type.name, type.id] }, prompt: "Seleccione una opción" %>
+  </div>
+  
+  <br>
+
+  <div class="actions">
+    <%= form.submit :onclick => "return confirm('Add this bookmark?')" %>
+  </div>
+<% end %>
