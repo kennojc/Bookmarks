@@ -18,6 +18,11 @@ class CategoriesController < ApplicationController
     end
   end
 
+  def data_categories
+    @categories = Category.build_data
+    render json: @categories
+  end
+
 
   # GET /categories/new
   def new
