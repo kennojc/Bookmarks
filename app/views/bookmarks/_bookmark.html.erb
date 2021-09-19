@@ -1,6 +1,10 @@
-<li id="bookmark-<%= bookmark.id %>">
-  <p><%= bookmark.address %></p>
-  <%= link_to 'show', bookmark, remote: true %>
-  <%= link_to 'edit', edit_bookmark_path(bookmark), remote: true %>
-  <%= link_to 'destroy', bookmark, data: {remote: true, confirm: 'are you sure?'}, method: :delete %>
-</li> 
+<li id="bookmark-<%= bookmark.id %>", class="d-inline">
+  <div id="bookmark_<%= bookmark.id %>", class="mb-2">
+    <p class="d-inline"><%= bookmark.address %></p>
+    <p class="d-inline"><strong><%= bookmark.category.name %></strong></p>
+    <p class="d-inline"><em><%= bookmark.type.name %></em></p>
+    <%= link_to 'show', bookmark, remote: true %>
+    <%= link_to 'edit', edit_bookmark_path(bookmark), remote: true %>
+    <%= link_to 'destroy', bookmark, data: {remote: true, confirm: 'are you sure?'}, method: :delete %>
+  </div>
+</li>

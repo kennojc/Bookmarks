@@ -1,4 +1,4 @@
-target_li = document.getElementById('bookmark-<%= @bookmark.id %>'),
-ul_list = document.querySelector('ul')
+target_li = document.getElementById('bookmark_<%= @bookmark.id %>'),
+target_ul = document.querySelector('ul')
 
-ul_list.removeChild(target_li)
+target_ul.removeChild(target_li)

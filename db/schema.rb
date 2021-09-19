@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_18_234918) do
+ActiveRecord::Schema.define(version: 2021_09_19_011230) do
 
   create_table "bookmarks", force: :cascade do |t|
     t.string "address"
@@ -39,5 +39,4 @@ ActiveRecord::Schema.define(version: 2021_09_18_234918) do
 
   add_foreign_key "bookmarks", "categories"
   add_foreign_key "bookmarks", "types"
-  add_foreign_key "categories", "categories"
 end
