@@ -4,6 +4,7 @@ class TypesController < ApplicationController
   # GET /types or /types.json
   def index
     @types = Type.all
+    @bookmarks = Type.hash_for_graph
   end
 
   # GET /types/1 or /types/1.json

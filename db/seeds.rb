@@ -23,11 +23,12 @@ end
 
 20.times do
     Bookmark.create(
-        address: Faker::Internet.url ,
+        address: "#{Faker::Internet.url}" ,
         category_id: rand(1..10),
-        type_id: rand(1..20)
+        type_id: rand(1..6)
     )
 end
+
 
 20.times do
     Category.create!(

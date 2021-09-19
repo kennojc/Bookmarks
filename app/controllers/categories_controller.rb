@@ -10,6 +10,15 @@ class CategoriesController < ApplicationController
   def show
   end
 
+  def my_category
+    @bookmarks = Bookmark.all
+    @my_category = Bookmarks.where(category_id: params[:json_id])
+    respond_to do |format|
+      format.json { render json: @my_category }
+    end
+  end
+
+
   # GET /categories/new
   def new
     @category = Category.new
